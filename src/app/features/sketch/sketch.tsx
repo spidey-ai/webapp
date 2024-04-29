@@ -27,8 +27,8 @@ export function Sketch({
       fillWeight: 5,
       fillStyle: "zigzag",
       strokeLineDash: dashed ? [10, 15] : undefined,
-      roughness: 2.5,
-      bowing: 1.5,
+      roughness: 2.8,
+      bowing: 1.4,
       disableMultiStrokeFill: true,
       disableMultiStroke: true,
     })
@@ -48,7 +48,7 @@ export function Sketch({
         // Animate the sketch into first view
         if (initial)
           await controls.start(
-            { opacity: 1, scale: [0.95, 1], rotateZ: [-12, 0] },
+            { opacity: 1, scale: [0.9, 1], rotateZ: [-12, 0] },
             { type: "spring" },
           )
       })()
@@ -60,7 +60,7 @@ export function Sketch({
     return () => {
       clearInterval(interval)
     }
-  }, [output, draw, controls, initial])
+  }, [output, draw, controls, initial, dashed])
 
   const Child = forwardRef((props, ref) => {
     return cloneElement(draw, { ...props, ref })

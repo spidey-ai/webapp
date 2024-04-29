@@ -33,7 +33,8 @@ export default async function Home() {
             draw={<SpiderSketch />}
           />
           <button
-            className="rounded-xl bg-black px-4 py-2 text-2xl font-semibold text-white hover:opacity-80 active:translate-y-0.5"
+            className="rounded-xl bg-brand px-4 py-2 text-2xl font-semibold text-amber-50 hover:opacity-80 active:translate-y-0.5"
+            data-tally-hide-title="1"
             data-tally-open="waB099"
             data-tally-layout="modal"
             data-tally-emoji-text="🫶"
@@ -48,6 +49,11 @@ export default async function Home() {
           />
           <Sketch className="self-center" draw={<UnderlineSketch />} />
         </div>
+
+        <p className="mt-5 font-comic text-sm font-bold">
+          if you join, we&apos;ll give you 2 months of free access when we
+          launch!!!!
+        </p>
       </main>
     </>
   )
